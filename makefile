@@ -1,4 +1,4 @@
-MODULENAME = YOUR_PACKAGE_NAME 
+MODULENAME = project_packages 
 
 help:
 @echo ""
@@ -36,4 +36,4 @@ pydocstyle $(MODULENAME)
 test:
 pytest -v $(MODULENAME)
 
-.PHONY: init doc lint test[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[B[B[B[B[B[packages[D[D[D[D[D[D[D[Dproject_packages[C[A[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[B[B[B
+.PHONY: init doc lint test
