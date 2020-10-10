@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.1" />
+<title>func_guide API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>func_guide</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># coding=utf-8
+
+def Read_PWCjson(f_code, f_abs):
+    &#34;&#34;&#34; Read two pwc datasets, one for paper&#39;s urls, the other for abstracts.
+    
+    Args:
+        f_code: the file link for urls
+        f_abs:  the file link for abstracts
+    Returns:
+        paper_code: raw urls&#39; data
+        paper_abs:  raw abstracts&#39; data
+    &#34;&#34;&#34;
+    #return(paper_code, paper_abs)
+
+def process_PWC( paper_code, paper_abs ):
+    &#34;&#34;&#34; 
+        Process pwc datasts using the following steps.
+     1) process &#34;paper_code&#34;: mentioned_in_paper&#34; == True
+     2) process &#34;paper_code&#34;: remove duplicates
+     3) merge &#34;paper_code&#34; with &#34;paper_abs&#34;
+    
+    Args:
+        paper_code: raw urls&#39; data
+        paper_abs:  raw abstracts&#39; data
+        
+    Returns:
+        pwc_sub: merged (intersected) papers with url+abs
+    &#34;&#34;&#34;
+    #return pwc_sub
+    
+
+def Read_DBLPjson(file):
+    &#34;&#34;&#34; Read large DBLP citation data (skip redundant abstracts info).
+    
+    Args: 
+        file: the file link of DBLP data
+    
+    Returns:
+        dblp: raw dblp data without abstract info
+    &#34;&#34;&#34;
+    #return dblp
+
+
+def process_DBLP( dblp ):
+    &#34;&#34;&#34; Process dblp data with the following steps.
+    1) extract useful attributes, such as &#34;n_citation&#34;.. 
+    
+    Args:
+        dblp: raw dblp data without abstract info
+    
+    Returns:
+        dblp_sub: processed dblp data with selected features
+    &#34;&#34;&#34;
+    #return dblp_sub
+
+def merge_PWC_DBLP(pwc_sub, dblp_sub):
+    &#34;&#34;&#34; Left join paper_code_abs with dblp_sub using common (&#34;title&#34; &amp; &#34;year&#34;). 
+    
+    Args:
+        pwc_sub: processed dataset 1 (papers with url+abs)
+        dblp_sub: processed dataset 2 (dblp_with selected features)
+
+    Returns:
+        pwc_dblp_trt: cleaned treatment data (with urls)
+    &#34;&#34;&#34;
+    #return pwc_dblp_trt
+
+def gen_Control(paper_code, paper_abs, dblp):
+    &#34;&#34;&#34; Generate control group.
+    
+    Args:
+        paper_code: raw urls&#39; data
+        paper_abs:  raw abstracts&#39; data
+        dblp: raw dblp data without abstract info
+        
+    Returns:
+        pwc_dblp_con: cleaned controled data (without urls)
+    &#34;&#34;&#34;
+    #return pwc_dblp_con
+
+
+def matching(pwc_dblp_trt, pwc_dblp_con):
+    &#34;&#34;&#34; For each treated item in &#34;pwc_dblp_trt&#34;. 
+        select a matched item as control
+   
+    Args:
+        pwc_dblp_trt: cleaned treatment data (with urls)
+        pwc_dblp_con: cleaned controled data (without urls)
+    
+    Returns:
+        matched_dta: the dataset with treated and control items.
+    &#34;&#34;&#34;
+    #return matched_dta</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="func_guide.Read_DBLPjson"><code class="name flex">
+<span>def <span class="ident">Read_DBLPjson</span></span>(<span>file)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read large DBLP citation data (skip redundant abstracts info).</p>
+<p>Args:
+file: the file link of DBLP data</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dblp</code></dt>
+<dd>raw dblp data without abstract info</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Read_DBLPjson(file):
+    &#34;&#34;&#34; Read large DBLP citation data (skip redundant abstracts info).
+    
+    Args: 
+        file: the file link of DBLP data
+    
+    Returns:
+        dblp: raw dblp data without abstract info
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="func_guide.Read_PWCjson"><code class="name flex">
+<span>def <span class="ident">Read_PWCjson</span></span>(<span>f_code, f_abs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read two pwc datasets, one for paper's urls, the other for abstracts.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>f_code</code></strong></dt>
+<dd>the file link for urls</dd>
+<dt><strong><code>f_abs</code></strong></dt>
+<dd>the file link for abstracts</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>paper_code</code></dt>
+<dd>raw urls' data</dd>
+<dt><code>paper_abs</code></dt>
+<dd>raw abstracts' data</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def Read_PWCjson(f_code, f_abs):
+    &#34;&#34;&#34; Read two pwc datasets, one for paper&#39;s urls, the other for abstracts.
+    
+    Args:
+        f_code: the file link for urls
+        f_abs:  the file link for abstracts
+    Returns:
+        paper_code: raw urls&#39; data
+        paper_abs:  raw abstracts&#39; data
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="func_guide.gen_Control"><code class="name flex">
+<span>def <span class="ident">gen_Control</span></span>(<span>paper_code, paper_abs, dblp)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generate control group.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>paper_code</code></strong></dt>
+<dd>raw urls' data</dd>
+<dt><strong><code>paper_abs</code></strong></dt>
+<dd>raw abstracts' data</dd>
+<dt><strong><code>dblp</code></strong></dt>
+<dd>raw dblp data without abstract info</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pwc_dblp_con</code></dt>
+<dd>cleaned controled data (without urls)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gen_Control(paper_code, paper_abs, dblp):
+    &#34;&#34;&#34; Generate control group.
+    
+    Args:
+        paper_code: raw urls&#39; data
+        paper_abs:  raw abstracts&#39; data
+        dblp: raw dblp data without abstract info
+        
+    Returns:
+        pwc_dblp_con: cleaned controled data (without urls)
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="func_guide.matching"><code class="name flex">
+<span>def <span class="ident">matching</span></span>(<span>pwc_dblp_trt, pwc_dblp_con)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>For each treated item in "pwc_dblp_trt".
+select a matched item as control</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>pwc_dblp_trt</code></strong></dt>
+<dd>cleaned treatment data (with urls)</dd>
+<dt><strong><code>pwc_dblp_con</code></strong></dt>
+<dd>cleaned controled data (without urls)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>matched_dta</code></dt>
+<dd>the dataset with treated and control items.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def matching(pwc_dblp_trt, pwc_dblp_con):
+    &#34;&#34;&#34; For each treated item in &#34;pwc_dblp_trt&#34;. 
+        select a matched item as control
+   
+    Args:
+        pwc_dblp_trt: cleaned treatment data (with urls)
+        pwc_dblp_con: cleaned controled data (without urls)
+    
+    Returns:
+        matched_dta: the dataset with treated and control items.
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="func_guide.merge_PWC_DBLP"><code class="name flex">
+<span>def <span class="ident">merge_PWC_DBLP</span></span>(<span>pwc_sub, dblp_sub)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Left join paper_code_abs with dblp_sub using common ("title" &amp; "year"). </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>pwc_sub</code></strong></dt>
+<dd>processed dataset 1 (papers with url+abs)</dd>
+<dt><strong><code>dblp_sub</code></strong></dt>
+<dd>processed dataset 2 (dblp_with selected features)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pwc_dblp_trt</code></dt>
+<dd>cleaned treatment data (with urls)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def merge_PWC_DBLP(pwc_sub, dblp_sub):
+    &#34;&#34;&#34; Left join paper_code_abs with dblp_sub using common (&#34;title&#34; &amp; &#34;year&#34;). 
+    
+    Args:
+        pwc_sub: processed dataset 1 (papers with url+abs)
+        dblp_sub: processed dataset 2 (dblp_with selected features)
+
+    Returns:
+        pwc_dblp_trt: cleaned treatment data (with urls)
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="func_guide.process_DBLP"><code class="name flex">
+<span>def <span class="ident">process_DBLP</span></span>(<span>dblp)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Process dblp data with the following steps.
+1) extract useful attributes, such as "n_citation".. </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>dblp</code></strong></dt>
+<dd>raw dblp data without abstract info</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dblp_sub</code></dt>
+<dd>processed dblp data with selected features</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def process_DBLP( dblp ):
+    &#34;&#34;&#34; Process dblp data with the following steps.
+    1) extract useful attributes, such as &#34;n_citation&#34;.. 
+    
+    Args:
+        dblp: raw dblp data without abstract info
+    
+    Returns:
+        dblp_sub: processed dblp data with selected features
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+<dt id="func_guide.process_PWC"><code class="name flex">
+<span>def <span class="ident">process_PWC</span></span>(<span>paper_code, paper_abs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Process pwc datasts using the following steps.
+1) process "paper_code": mentioned_in_paper" == True
+2) process "paper_code": remove duplicates
+3) merge "paper_code" with "paper_abs"</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>paper_code</code></strong></dt>
+<dd>raw urls' data</dd>
+<dt><strong><code>paper_abs</code></strong></dt>
+<dd>raw abstracts' data</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pwc_sub</code></dt>
+<dd>merged (intersected) papers with url+abs</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def process_PWC( paper_code, paper_abs ):
+    &#34;&#34;&#34; 
+        Process pwc datasts using the following steps.
+     1) process &#34;paper_code&#34;: mentioned_in_paper&#34; == True
+     2) process &#34;paper_code&#34;: remove duplicates
+     3) merge &#34;paper_code&#34; with &#34;paper_abs&#34;
+    
+    Args:
+        paper_code: raw urls&#39; data
+        paper_abs:  raw abstracts&#39; data
+        
+    Returns:
+        pwc_sub: merged (intersected) papers with url+abs
+    &#34;&#34;&#34;</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="func_guide.Read_DBLPjson" href="#func_guide.Read_DBLPjson">Read_DBLPjson</a></code></li>
+<li><code><a title="func_guide.Read_PWCjson" href="#func_guide.Read_PWCjson">Read_PWCjson</a></code></li>
+<li><code><a title="func_guide.gen_Control" href="#func_guide.gen_Control">gen_Control</a></code></li>
+<li><code><a title="func_guide.matching" href="#func_guide.matching">matching</a></code></li>
+<li><code><a title="func_guide.merge_PWC_DBLP" href="#func_guide.merge_PWC_DBLP">merge_PWC_DBLP</a></code></li>
+<li><code><a title="func_guide.process_DBLP" href="#func_guide.process_DBLP">process_DBLP</a></code></li>
+<li><code><a title="func_guide.process_PWC" href="#func_guide.process_PWC">process_PWC</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+</footer>
+</body>
+</html>
