@@ -13,7 +13,7 @@ def test_file_load_missing_url_file():
     '''Test if the function raises the exception if nonexisting URL_file name is passed as parameter.'''
 
     with pytest.raises(ValueError) as excinfo:
-        read_PWCjson.read_PWCjson("non-existing_file.json", "abstracts.json")
+        read_PWCjson.read_PWCjson("./Test_data/non-existing_file.json", "./Test_data/abstracts.json")
 
     assert "urls_text file does not exist" in str(excinfo.value)
 
@@ -23,7 +23,7 @@ def test_file_load_missing_abs_file():
     ''' Test if the function raises the exception if nonexisting ABSTRACT_file name is passed as parameter. '''
     
     with pytest.raises(ValueError) as excinfo:
-        read_PWCjson.read_PWCjson('urls.json', "non-existing_file.json")
+        read_PWCjson.read_PWCjson('./Test_data/urls.json', "./Test_data/non-existing_file.json")
 
     assert "abstracts_text file does not exist" in str(excinfo.value)
 
@@ -32,7 +32,7 @@ def test_file_load_missing_abs_file():
 def test_file_name_json_url_file():
     # Test if the URL_file name is ".json" format
     with pytest.raises(ValueError) as excinfo:
-      	read_PWCjson.read_PWCjson("urls.txt", 'abstracts.json')
+      	read_PWCjson.read_PWCjson("./Test_data/urls.txt", './Test_data/abstracts.json')
     assert "Not correct json file in urls_text" in str(excinfo.value)
 
 
@@ -40,7 +40,7 @@ def test_file_name_json_url_file():
 def test_file_name_json_abs_file():
     # Test if the Abstract_file name is ".json" format
     with pytest.raises(ValueError) as excinfo:
-	      read_PWCjson.read_PWCjson('urls.json', 'abstracts.txt')
+	      read_PWCjson.read_PWCjson('./Test_data/urls.json', './Test_data/abstracts.txt')
     assert "Not correct json file in abstracts_text" in str(excinfo.value)
 
 
@@ -48,7 +48,7 @@ def test_file_name_json_abs_file():
 @pytest.mark.file_good
 def test_file_return_good():
     # Test if the URL_file//Abs_file has enough rows
-    paper_code, paper_abs = read_PWCjson.read_PWCjson('urls.json', 'abstracts.json')
+    paper_code, paper_abs = read_PWCjson.read_PWCjson('./Test_data/urls.json', './Test_data/abstracts.json')
     assert (len(paper_code) > 30000) & (len(paper_abs) > 50000)
         # there should be 37,480 rows for URL_file
         # there should be 133,824 rows for abs_file
@@ -57,7 +57,7 @@ def test_file_return_good():
 @pytest.mark.file_list
 def test_file_return_list():
     # Test if the returned URL_file/Abs_file  is "list" 
-    paper_code, paper_abs = read_PWCjson.read_PWCjson("urls.json", "abstracts.json")
+    paper_code, paper_abs = read_PWCjson.read_PWCjson("./Test_data/urls.json", "./Test_data/abstracts.json")
     assert (type(paper_code) == list) & (type(paper_abs) == list)
         
        
