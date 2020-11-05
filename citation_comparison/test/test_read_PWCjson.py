@@ -1,4 +1,4 @@
-import read_PWCjson
+from citation_comparison import read_PWCjson
 import pytest
 import numpy as np
 
