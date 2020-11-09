@@ -1,4 +1,3 @@
-
 import json
 import gzip
 import os
@@ -7,7 +6,6 @@ import pickle
 from itertools import compress   # compress(list, boolean)
 from collections import Counter
 import numpy as np
-import ijson
 
 def read_pwcjson(f_code, f_abs):
     """ Read two pwc datasets, one for paper's urls, the other for abstracts.
@@ -353,3 +351,5 @@ def matching(pwc_dblp_trt, pwc_dblp_con):
     """
     #return matched_dta
     
+
+
