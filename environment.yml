@@ -1,4 +1,3 @@
-name: test
 channels:
   - defaults
 dependencies:
@@ -9,11 +8,9 @@ dependencies:
   - python-utils
   - matplotlib
   - git
-  - m2-base
   - pdoc3
   - pydocstyle
   - pytest
   - pylint
   - selenium
   - autopep8
-prefix: C:\Users\chenj107\AppData\Local\Continuum\anaconda3\envs\test
