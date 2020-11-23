@@ -80,3 +80,7 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+#data
+.csv
+#video
+.mp4
