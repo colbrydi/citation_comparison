@@ -1,16 +1,19 @@
 channels:
   - defaults
 dependencies:
+  - pip
   - pytorch
   - torchvision
   - cudatoolkit=10.1
   - ipykernel
   - python-utils
   - matplotlib
-  - git
   - pdoc3
   - pydocstyle
   - pytest
   - pylint
   - selenium
+  - pandas
+  - scipy
   - autopep8
+  - ijson
