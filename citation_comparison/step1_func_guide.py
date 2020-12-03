@@ -1,3 +1,4 @@
+
 import json
 import gzip
 import os
@@ -54,12 +55,11 @@ def process_pwc(paper_code, paper_abs, mention_paper=True):
     """
     ### 1) process "paper_code": mentioned_in_paper" == True
     paper_code = [x for x in paper_code if x['mentioned_in_paper'] == mention_paper ]
-   
+    
     ### 2) process "paper_code": remove duplicates
     #print( len(paper_code) )
     paper_title = [x['paper_title'] for x in paper_code]
-    #print( len(np.unique(paper_title)) )
-    
+    #print( len(np.unique(paper_title)) )   
     title_index = []
     for title, count in Counter(paper_title).items():
         if count > 1:
@@ -98,7 +98,6 @@ def process_pwc(paper_code, paper_abs, mention_paper=True):
     paper_code_unique = [item for item in paper_code if item['paper_title']
                          in title_unique_index]
     # print(len(paper_code_unique))
-    
     # generate "paper_code_upd"
     paper_code_upd = paper_code_unique + duplicated_items_clean
 
@@ -122,8 +121,7 @@ def read_dblpjson(file):
     Returns:
         dblp: raw dblp data without abstract info
     """
-    import ijson
-    
+    #import ijson
     ### 1) read
     dta_dblp = ijson.parse(open(file, 'r', encoding="utf8"))
     ### 2) remove redundant abstracts info by applying func "remove_index_abs()"
@@ -131,8 +129,8 @@ def read_dblpjson(file):
     return remove_index_abs(dta_dblp)
 
 def process_dblp(dblp):
-    """ Process dblp data with the following steps.
-    extract useful attributes, such as "n_citation"..
+    """ Process dblp data with the following steps. extract useful attributes,\ 
+        such as "n_citation"..
     Args:
         dblp: raw dblp data without abstract info
     Returns:
@@ -290,7 +288,8 @@ def merge_pwc_dblp(pwc_sub_trt, dblp_match_cs):
     """ Left join pwc_sub with dblp_sub using common ("title" & "year").
     Args:
         pwc_sub_trt: processed dataset 1 (papers with url+abs), either trt or control
-        dblp_match_cs: processed dataset 2 (dblp_with selected features with MATCH titles in pwc_sub)
+        dblp_match_cs: processed dataset 2 (dblp_with selected features with MATCH titles 
+                     in pwc_sub)
     Returns:
         match_trt: cleaned treatment data (with urls)
     """
