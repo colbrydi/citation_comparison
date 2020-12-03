@@ -22,11 +22,11 @@ def test_file_load_missing_url_file():
 @pytest.mark.load_missing
 def test_file_load_missing_abs_file():
     ''' Test if the function raises the exception \
-    if nonexisting ABSTRACT_file name is passed as parameter.
-    '''
+    if nonexisting ABSTRACT_file name is passed as parameter.'''
     with pytest.raises(ValueError) as excinfo:
         read_pwcjson("./Test_data/urls.json",
                      "./Test_data/non-existing_file.json")
+        
     assert "abstracts_text file does not exist" in str(excinfo.value)
 
 
@@ -36,6 +36,7 @@ def test_file_name_json_url_file():
     with pytest.raises(ValueError) as excinfo:
         read_pwcjson("./Test_data/urls.txt",
                      "./Test_data/abstracts.json")
+        
     assert "Not correct json file in urls_text" in str(excinfo.value)
 
 
