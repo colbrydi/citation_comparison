@@ -36,4 +36,4 @@ doclint:
 test:
 	pytest -v $(MODULENAME)
 
-.PHONY: init doc lint test
+.PHONY: init docs lint test

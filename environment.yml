@@ -4,8 +4,6 @@ dependencies:
   - pip
   - pytorch
   - torchvision
-  - cudatoolkit=10.1
-  - ipykernel
   - python-utils
   - matplotlib
   - pdoc3
